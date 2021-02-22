@@ -34,6 +34,9 @@ public class Main {
                 .filter(personPredicate)//and pass it to filter function
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
+        List<String> valueList = new ArrayList<>();
+        System.out.println(valueList.stream().reduce((first, second) -> second)
+                .orElse(null));
     }
 
     static class Person{
