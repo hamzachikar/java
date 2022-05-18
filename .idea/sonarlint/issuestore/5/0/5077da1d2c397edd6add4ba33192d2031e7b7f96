@@ -1,14 +1,0 @@
-
-G
-java:S5411"*Use the primitive boolean expression here.(µÓ¤¾8â¼ŞÕû.
-n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(üå„Æûÿÿÿÿ8”úÔû.
-‚
-java:S1192"fDefine a constant instead of duplicating this literal ", thanks for registring phone number " 3 times.(ğŠ¼H8ÓÈÜÕû.
-T	java:S106"9Replace this use of System.out or System.err by a logger.(˜àµd8ÓÈÜÕû.
-N
-java:S1602",Remove useless curly braces around statement(û†¸úÿÿÿÿ8ÓÈÜÕû.
-T	java:S106"9Replace this use of System.out or System.err by a logger.(ğŠ¼H8¸ı–Õû.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(Îì…8³ÎŸÕû.
-T	java:S106"9Replace this use of System.out or System.err by a logger.(˜àµd8¸ı–Õû.
-c
-java:S1192"GDefine a constant instead of duplicating this literal "Hello " 3 times.(ğŠ¼H8ÓÈÜÕû.

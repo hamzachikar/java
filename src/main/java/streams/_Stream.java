@@ -12,11 +12,11 @@ import java.util.stream.Collectors;
 public class _Stream {
     public static void main(String[] args) {
         List<Person> people =List.of(
-                new Person("John", Gender.MALE),
-                new Person("Maria", Gender.FEMALE),
-                new Person("Asma", Gender.FEMALE),
-                new Person("Alex", Gender.MALE),
-                new Person("Alice", Gender.FEMALE)
+                new Person("John", Gender.MALE, 12),
+                new Person("Maria", Gender.FEMALE, 20),
+                new Person("Asma", Gender.FEMALE, 30),
+                new Person("Alex", Gender.MALE, 60),
+                new Person("Alice", Gender.FEMALE,8)
 
         );
 
@@ -34,8 +34,12 @@ public class _Stream {
                 .forEach(println);
 
         final Predicate<Person> personPredicate = person -> person.gender.equals(Gender.FEMALE);
-        System.out.println(people.stream()
-                .allMatch(personPredicate));
+       /* System.out.println(people.stream()
+                .allMatch(personPredicate));*/
+
+        final Predicate<Person> personMale = person->person.gender.equals(Gender.MALE);
+        List<String>maleNames=people.stream().filter(personMale).map(Person::getName).collect(Collectors.toList());
+        maleNames.forEach(System.out::println);
 
     }
 
@@ -43,16 +47,21 @@ public class _Stream {
 
         private final String name;
         private final Gender gender;
-        Person(String name,Gender gender){
+        private final int age;
+        Person(String name,Gender gender,int age){
             this.name=name;
             this.gender=gender;
+            this.age=age;
         }
-
+        public String getName(){
+            return this.name;
+        }
         @Override
         public String toString() {
             return "Person{" +
                     "name='" + name + '\'' +
-                    ", gender=" + gender +
+                    ", gender=" + gender +'\'' +
+                    ", age=" + age +
                     '}';
         }
     }
